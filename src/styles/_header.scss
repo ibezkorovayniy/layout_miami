@@ -1,0 +1,55 @@
+.header {
+  background-image: url("../images/header.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 765px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-top: 35px;
+    margin-left: calc(50% - #{$logo-width/2});
+    color: $default-text-color;
+    text-transform: uppercase;
+  }
+
+  &__phone {
+    margin: 0 82px 12px;
+  }
+
+  &__action {
+    margin-bottom: 12px;
+  }
+
+  &__link {
+    color: $default-text-color;
+    text-decoration: none;
+    border-bottom: 1px white dashed;
+    transition: color $hover-duration;
+
+    &:hover {
+      color: $active-color;
+    }
+  }
+}
+
+@media screen and (max-width: $small-screen-offset) {
+  .header {
+    &__top {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__phone {
+      margin: 20px -5px;
+    }
+
+    &__action {
+      margin: 0 0 0 -2px;
+    }
+
+  }
+}
